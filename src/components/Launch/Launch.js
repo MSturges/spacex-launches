@@ -34,7 +34,7 @@ const Launch = ({ launch, itemAlignment }) => {
   const [loading, setloading] = useState(false);
   const [data, setData] = useState([]);
   const [attemptedFetch, setAttemptedFetch] = useState(false);
-  const [playVideo, toggleVideo] = useState(false);
+  const [showVideo, toggleVideo] = useState(false);
   let videoEmbed;
 
   if (launch.links.video_link) {
@@ -84,12 +84,12 @@ const Launch = ({ launch, itemAlignment }) => {
           <p>{launch.details ? launch.details : "No details at this time"}</p>
           {videoEmbed ? (
             <Video
-              playVideo={playVideo}
+              showVideo={showVideo}
               toggleVideo={toggleVideo}
               url={videoEmbed}
             />
           ) : (
-            "No Video"
+            "No Video Available"
           )}
           <br />
           {data.length >= 1 ? <Comments data={data} /> : ""}

@@ -7,15 +7,8 @@ const Launches = ({ launches }) => {
   let alignTimelineItem = "left";
   const launchesByDate = launches.reduce((list, launch) => {
     const date = launch.launch_date_utc.slice(0, 4);
-
-    // const launchDateFormatForSort = launch.launch_date_utc
-    //   .slice(0, 10)
-    //   .split("-")
-    //   .join("");
-
     list[date] = list[date] || [];
     list[date].push(launch);
-
     return list;
   }, {});
 

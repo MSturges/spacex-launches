@@ -7,7 +7,7 @@ import Loading from "./components/Loading";
 import Launches from "./components/Launches";
 
 const launchesQuery = `{
-  launches {
+  launches(sort: "launch_date_utc", order: "ASC") {
     id
     launch_success
     mission_id

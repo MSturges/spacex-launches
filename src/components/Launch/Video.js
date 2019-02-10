@@ -1,10 +1,10 @@
 import React from "react";
 import "../../App.css";
 
-const Video = ({ playVideo, toggleVideo, url }) => {
+const Video = ({ showVideo, toggleVideo, url }) => {
   return (
     <>
-      {playVideo ? (
+      {showVideo ? (
         <div className="video-responsive">
           <iframe
             width="560"
@@ -19,9 +19,9 @@ const Video = ({ playVideo, toggleVideo, url }) => {
       ) : null}
       <button
         className="btn btn-primary video-button "
-        onClick={() => toggleVideo(!playVideo)}
+        onClick={() => toggleVideo(!showVideo)}
       >
-        {playVideo ? "Hide Video" : "Load Video"}
+        {showVideo ? "Hide Video" : "Load Video"}
       </button>
     </>
   );
