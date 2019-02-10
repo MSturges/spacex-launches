@@ -1,3 +1,35 @@
 .timeline-header {
   padding-left: 0;
 }
+
+.comment {
+  padding: 1rem;
+}
+.custom-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.author-font {
+  font-size: 1.4rem;
+}
+
+.video-responsive {
+  margin-top: 1rem;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.video-button {
+  margin: 1rem 0;
+}
