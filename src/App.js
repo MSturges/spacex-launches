@@ -11,6 +11,7 @@ const launchesQuery = `{
     id
     launch_success
     mission_id
+    mission_name
     launch_date_utc
     launch_site {
       site_name
